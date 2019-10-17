@@ -5,7 +5,7 @@ from .models import Decade, Fad
 class FadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fad
-        fields = ('name', 'image_url', 'description', 'decade',)
+        fields = ('name', 'image_url', 'description', 'decade', 'id')
 
 class DecadeSerializer(serializers.ModelSerializer):
 
@@ -13,4 +13,4 @@ class DecadeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Decade
-        fields = ('start_year', 'fads',)
+        fields = ('start_year', 'fads', 'id')
